@@ -4,7 +4,9 @@
   "description": "newsletter-sign-up page challenge from frontend mentor",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch scss/styles.scss:css/styles.css"
+    "sass": "sass --watch scss/styles.scss:css/styles.css",
+    "build": "tsc",
+    "build:watch": "tsc -w"
   },
   "author": "Na Yeon (Diana)",
   "license": "ISC",

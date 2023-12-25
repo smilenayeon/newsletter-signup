@@ -52,7 +52,16 @@ body {
   width: 100%;
   margin-top: 2rem;
 }
-.sign-up-page .left-side form label {
+.sign-up-page .left-side form .label-error-message {
+  display: flex;
+  justify-content: space-between;
+}
+.sign-up-page .left-side form .label-error-message label {
+  font-weight: 700;
+}
+.sign-up-page .left-side form .label-error-message .error-message {
+  display: none;
+  color: hsl(4, 100%, 67%);
   font-weight: 700;
 }
 .sign-up-page .left-side form #email {
@@ -92,6 +101,7 @@ body {
   width: fit-content;
   height: auto;
   margin: 0 auto;
+  display: none;
 }
 .desktop-success img {
   width: 3rem;
