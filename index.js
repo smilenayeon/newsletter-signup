@@ -33,3 +33,19 @@ function dissmissHandler(event) {
     emailInput.style.border = ''; //Reset border color to default
     emailError.style.display = "none"; // not show the error message
 }
+//change the img src when the screen size gets smaller than 376px
+document.addEventListener('DOMContentLoaded', function () {
+    const img = document.getElementById("signup-image");
+    function updateImage() {
+        if (window.innerWidth <= 375) {
+            img.src = "assets/images/illustration-sign-up-mobile.svg";
+        }
+        else {
+            img.src = "assets/images/illustration-sign-up-desktop.svg";
+        }
+    }
+    // Add event listener for window resize
+    window.addEventListener('resize', updateImage);
+    // Call updateImage on initial load
+    updateImage();
+});

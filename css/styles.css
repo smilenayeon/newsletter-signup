@@ -1,16 +1,32 @@
 body {
   background-color: hsl(234, 29%, 20%);
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sign-up-page {
   padding: 15px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
+  max-height: 800px;
+  min-width: fit-content;
   display: flex;
   width: fit-content;
   height: auto;
-  margin: 0 auto;
+  margin: auto;
+}
+@media (max-width: 376px) {
+  .sign-up-page {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    padding: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
 }
 .sign-up-page .left-side {
   display: flex;
@@ -18,9 +34,11 @@ body {
   align-items: flex-start;
   flex-direction: column;
   margin: auto 5%;
-  height: 400px;
+  height: fit-content;
+  padding: 15px;
 }
 .sign-up-page .left-side h1 {
+  text-align: left;
   color: hsl(234, 29%, 20%);
   font-weight: 700;
   font-size: 3rem;
@@ -30,6 +48,7 @@ body {
   font-size: 16px;
   color: hsl(235, 18%, 26%);
   font-weight: 400;
+  text-align: left;
 }
 .sign-up-page .left-side ul {
   color: hsl(235, 18%, 26%);
@@ -45,6 +64,7 @@ body {
   padding-left: 30px;
   line-height: 2.5;
   margin: 3px;
+  text-align: left;
 }
 .sign-up-page .left-side form {
   display: flex;
@@ -88,6 +108,21 @@ body {
 }
 .sign-up-page .right-side {
   border-radius: 20px;
+  padding: 15px;
+}
+@media (max-width: 376px) {
+  .sign-up-page .right-side {
+    padding: 0;
+  }
+}
+.sign-up-page .right-side img {
+  width: 100%;
+}
+@media (max-width: 376px) {
+  .sign-up-page .right-side img {
+    margin: 0 0 1.5rem 0;
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 .desktop-success {
@@ -100,8 +135,14 @@ body {
   display: flex;
   width: fit-content;
   height: auto;
-  margin: 0 auto;
+  margin: auto;
   display: none;
+}
+@media (max-width: 376px) {
+  .desktop-success {
+    min-height: 100vh;
+    border-radius: 0;
+  }
 }
 .desktop-success img {
   width: 3rem;
@@ -117,6 +158,11 @@ body {
   font-size: 16px;
   color: hsl(235, 18%, 26%);
   font-weight: 400;
+}
+@media (max-width: 376px) {
+  .desktop-success p {
+    margin-bottom: 50%;
+  }
 }
 .desktop-success button {
   width: 100%;
@@ -137,9 +183,12 @@ body {
   font-size: 11px;
   text-align: center;
 }
-
-.attribution a {
+.attribution p {
+  color: hsl(231, 7%, 60%);
+}
+.attribution p a {
   color: hsl(228, 45%, 44%);
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

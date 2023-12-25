@@ -9,6 +9,7 @@ $paragraph-size: 16px;
 $round-border-radius: 20px;
 $less-round-border-radius:10px;
 $standard-padding: 15px;
+$mobile-width: 376px;
 
 // Mixins
 @mixin flex-container {
@@ -25,11 +26,11 @@ $standard-padding: 15px;
         border:none;
         font-weight:700;
 }
-@mixin center-the-page{
+@mixin page{
     display: flex;
     width: fit-content;
     height: auto;
-    margin: 0 auto;
+    margin:auto;
 }
 @mixin title{
     color: $dark-slate-grey;
@@ -47,33 +48,52 @@ $standard-padding: 15px;
     background: linear-gradient($tomato-linear-gradient);
     box-shadow: 3px 5px 15px $tomato;
 }
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 // Styles
 body {
     background-color: $dark-slate-grey;
     font-family: 'Roboto', sans-serif;
-
-    
+    margin:0; 
+    min-height: 100vh;
+    @include flex-center;
 }
 
 .sign-up-page {
     padding: $standard-padding;
     background-color: $white;
     border-radius: $round-border-radius;
-    @include center-the-page;
+    max-height:800px;
+    min-width: fit-content;
+
+    @include page;
+    @media (max-width:$mobile-width) {
+        flex-direction:column;
+        flex-direction: column-reverse;
+        padding:0;
+        border-radius:0;
+        min-height:100vh;
+    }
     
     .left-side {
     @include flex-container;
     flex-direction: column;
     margin: auto 5%;
-    height:400px;
+    height: fit-content;
+    padding:$standard-padding;
     
         h1 {
+            text-align: left;
             @include title;
             }
 
         p {
             @include paragraph;
+            text-align: left;
             
         }
         ul{
@@ -89,6 +109,7 @@ body {
                 padding-left: 30px; 
                 line-height: 2.5; 
                 margin:3px;
+                text-align: left;
             }
         }
         
@@ -137,6 +158,20 @@ body {
 
     .right-side {
         border-radius: $round-border-radius;
+        padding:$standard-padding;
+        @media (max-width:$mobile-width) {
+            padding:0;
+        }
+
+        img{
+            width:100%;
+            @media (max-width:$mobile-width) {
+            margin:0 0 1.5rem 0;
+            border-radius:0 0 10px 10px;
+            
+            }
+        }
+        
     }
 }
 
@@ -148,8 +183,12 @@ body {
     max-width: 400px;
     padding:3rem;
     gap:1rem;
-    @include center-the-page;
+    @include page;
     display:none;
+    @media (max-width:$mobile-width) {
+        min-height: 100vh;
+        border-radius: 0;
+    }
     img{
         width:3rem;
         height:auto;
@@ -160,6 +199,9 @@ body {
     }
     p{
         @include paragraph;
+        @media (max-width:$mobile-width) {
+            margin-bottom:50%;
+        }
     }
     button{
         width:100%;
@@ -174,8 +216,12 @@ body {
 .attribution {
     font-size: 11px;
     text-align: center;
+    p{
+        color: $grey;
+      a {
+    color: hsl(228, 45%, 44%);
+    margin-top: 1rem;
+}  
+    }
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
