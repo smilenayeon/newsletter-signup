@@ -1,0 +1,135 @@
+body {
+  background-color: hsl(234, 29%, 20%);
+  font-family: "Roboto", sans-serif;
+}
+
+.sign-up-page {
+  padding: 15px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  display: flex;
+  width: fit-content;
+  height: auto;
+  margin: 0 auto;
+}
+.sign-up-page .left-side {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: auto 5%;
+  height: 400px;
+}
+.sign-up-page .left-side h1 {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+}
+.sign-up-page .left-side p {
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+  font-weight: 400;
+}
+.sign-up-page .left-side ul {
+  color: hsl(235, 18%, 26%);
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  font-weight: 400;
+}
+.sign-up-page .left-side ul li {
+  background-image: url("../assets/images/icon-list.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  padding-left: 30px;
+  line-height: 2.5;
+  margin: 3px;
+}
+.sign-up-page .left-side form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+}
+.sign-up-page .left-side form label {
+  font-weight: 700;
+}
+.sign-up-page .left-side form #email {
+  margin: 4% 0;
+  line-height: 2.5rem;
+  text-indent: 10px;
+  border: solid rgb(206, 201, 201);
+  border-radius: 10px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.sign-up-page .left-side form button {
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  line-height: 2.5rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+.sign-up-page .left-side form button:hover {
+  background: linear-gradient(to right, rgb(234, 85, 110), hsl(4, 100%, 67%));
+  box-shadow: 3px 5px 15px hsl(4, 100%, 67%);
+}
+.sign-up-page .right-side {
+  border-radius: 20px;
+}
+
+.desktop-success {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 3rem;
+  gap: 1rem;
+  display: flex;
+  width: fit-content;
+  height: auto;
+  margin: 0 auto;
+}
+.desktop-success img {
+  width: 3rem;
+  height: auto;
+}
+.desktop-success h1 {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+}
+.desktop-success p {
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+  font-weight: 400;
+}
+.desktop-success button {
+  width: 100%;
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  line-height: 2.5rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+.desktop-success button:hover {
+  background: linear-gradient(to right, rgb(234, 85, 110), hsl(4, 100%, 67%));
+  box-shadow: 3px 5px 15px hsl(4, 100%, 67%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=styles.css.map */

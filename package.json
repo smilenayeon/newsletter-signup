@@ -1,0 +1,14 @@
+{
+  "name": "newsletter-sign-up-with-success-message-main",
+  "version": "1.0.0",
+  "description": "newsletter-sign-up page challenge from frontend mentor",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/styles.scss:css/styles.css"
+  },
+  "author": "Na Yeon (Diana)",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}

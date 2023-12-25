@@ -1,0 +1,168 @@
+// Variables
+$dark-slate-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+$tomato: hsl(4, 100%, 67%);
+$tomato-linear-gradient:to right, rgb(234, 85, 110), $tomato;
+$paragraph-size: 16px;
+$round-border-radius: 20px;
+$less-round-border-radius:10px;
+$standard-padding: 15px;
+
+// Mixins
+@mixin flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+}
+@mixin button{
+        background-color: $dark-slate-grey;
+        border-radius: $less-round-border-radius;
+        color:$white;
+        line-height: 2.5rem;
+        cursor: pointer;
+        border:none;
+        font-weight:700;
+}
+@mixin center-the-page{
+    display: flex;
+    width: fit-content;
+    height: auto;
+    margin: 0 auto;
+}
+@mixin title{
+    color: $dark-slate-grey;
+    font-weight: 700;
+     font-size: 3rem;
+     margin: 0;
+}
+@mixin paragraph{
+    font-size: $paragraph-size;
+    color:$charcoal-grey;
+    font-weight: 400;
+
+}
+@mixin button-hover{
+    background: linear-gradient($tomato-linear-gradient);
+    box-shadow: 3px 5px 15px $tomato;
+}
+
+// Styles
+body {
+    background-color: $dark-slate-grey;
+    font-family: 'Roboto', sans-serif;
+
+    
+}
+
+.sign-up-page {
+    padding: $standard-padding;
+    background-color: $white;
+    border-radius: $round-border-radius;
+    @include center-the-page;
+    
+    .left-side {
+    @include flex-container;
+    flex-direction: column;
+    margin: auto 5%;
+    height:400px;
+    
+        h1 {
+            @include title;
+            }
+
+        p {
+            @include paragraph;
+            
+        }
+        ul{
+            color:$charcoal-grey;
+            list-style-type: none;
+            padding-left: 0;
+            margin:0;
+            font-weight: 400;
+            li{
+                background-image: url("../assets/images/icon-list.svg");
+                background-repeat: no-repeat;
+                background-position: 0 center;
+                padding-left: 30px; 
+                line-height: 2.5; 
+                margin:3px;
+            }
+        }
+        
+        form{
+            display:flex;
+            flex-direction: column;
+            width:100%;
+            margin-top:2rem;
+            label{
+                font-weight: 700;
+            }
+            #email{
+              margin:4% 0;  
+              line-height: 2.5rem;
+              text-indent: 10px;
+              border:solid rgb(206, 201, 201);
+              border-radius: $less-round-border-radius;
+              font-weight: 400;
+              cursor: pointer;
+                
+            }
+            button{
+                @include button;
+            }
+            button:hover{
+                @include button-hover;
+            }
+        }
+
+    }
+
+
+
+    .right-side {
+        border-radius: $round-border-radius;
+    }
+}
+
+
+.desktop-success{
+    background-color: $white;
+    border-radius: $round-border-radius;
+    flex-direction: column;
+    max-width: 400px;
+    padding:3rem;
+    gap:1rem;
+    @include center-the-page;
+    
+    img{
+        width:3rem;
+        height:auto;
+    
+    }
+    h1{
+        @include title;
+    }
+    p{
+        @include paragraph;
+    }
+    button{
+        width:100%;
+        @include button;
+    }
+    button:hover{
+        @include button-hover;
+    }
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
